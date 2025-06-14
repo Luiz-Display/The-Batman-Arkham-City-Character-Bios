@@ -1,0 +1,705 @@
+/* -----------------------------------
+   IMPORTAÇÃO DE FONTE
+----------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+/* -----------------------------------
+   ESTILO GERAL DA PÁGINA
+----------------------------------- */
+body {
+  background: linear-gradient(
+    60deg,
+    rgba(58, 19, 4, 1) 2%,
+    rgba(8, 7, 6, 1) 100%
+  );
+  margin: 0;
+  padding: 20px;
+  font-family: Garamond, serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* -----------------------------------
+   VÍDEOS DE FUNDO COM MÁSCARA
+----------------------------------- */
+#background-video1,
+#background-video2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+#background-video1 {
+  z-index: 0;
+  opacity: 0.9;
+}
+
+#background-video2 {
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* -----------------------------------
+   CONTAINER PRINCIPAL
+----------------------------------- */
+.app-container {
+  display: flex;
+  gap: 40px;
+  height: 100%;
+  align-items: center;
+}
+
+/* -----------------------------------
+   GRADE DE PERSONAGENS (QUADRADOS/SQUARES)
+----------------------------------- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px;
+  margin-left: 60px;
+  padding-top: 40px;
+}
+
+.square {
+  border: 2px solid white;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.square.selected,
+.square.highlight {
+  opacity: 1;
+}
+
+.square.highlight {
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+.flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  pointer-events: none;
+  animation: fadeOut 1s ease forwards;
+  border-radius: inherit;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Imagens específicas nos quadrados */
+.portrait-batman {
+  background-image: url("assets/batman.png");
+  background-size: 760%;
+  background-position: 45% 10%;
+}
+
+.portrait-catwoman {
+  background-image: url("assets/catwoman.png");
+  background-size: 850%;
+  background-position: 34% 8%;
+}
+
+.portrait-pinguim {
+  background-image: url("assets/penguin.png");
+  background-size: 350%;
+  background-position: 22% 40%;
+}
+
+.portrait-riddler {
+  background-image: url("assets/riddler.png");
+  background-size: 350%;
+  background-position: 55% 30%;
+}
+
+/* Badge NEW com animação */
+.badge-new {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: Garamond, bold;
+  animation: blink 1s infinite;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* -----------------------------------
+   TÍTULO DO PERSONAGEM
+----------------------------------- */
+.character-title {
+  position: fixed;
+  top: 40px;
+  left: 430px;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  color: white;
+  z-index: 10;
+  user-select: none;
+}
+
+/* -----------------------------------
+   IMAGEM DO PERSONAGEM À DIREITA
+----------------------------------- */
+.character-display {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.character-display img {
+  max-width: 100%;
+  max-height: 85%;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  position: relative;
+  z-index: 11;
+}
+
+#character-image {
+  width: 40%;
+  max-height: 90%;
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(-20px -20px 70px rgba(255, 0, 0, 0.2));
+}
+
+/* Fade-in do nome */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* -----------------------------------
+   PAINEL DA BIOGRAFIA
+----------------------------------- */
+.character-panel {
+  position: absolute;
+  top: 40;
+  left: 28vw;
+  width: 55vw;
+  height: 70%;
+  background: linear-gradient(
+    170deg,
+    rgba(58, 19, 4, 1) 2%,
+    rgba(8, 7, 6, 1) 100%
+  );
+  border: 2px solid white;
+  z-index: 10;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.panel-title {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.panel-content {
+  font-family: Garamond, serif;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(115, 0, 0, 0.014);
+}
+
+/* Botões do painel */
+.panel-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.panel-btn {
+  background: none;
+  border: 1px solid white;
+  padding: 6px;
+  cursor: pointer;
+  font-family: Garamond, serif;
+  border-radius: 12px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.panel-btn img {
+  display: block;
+  margin: auto;
+  width: 40%; /* ajustável conforme o layout */
+  max-width: 300px;
+}
+
+.panel-btn.active {
+  border: 1px solid white;
+  opacity: 1;
+}
+
+.panel-btn:hover,
+.panel-btn.active {
+  color: black;
+}
+
+/* Detalhes */
+.character-details {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  text-align: justify;
+}
+
+.character-details img {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+/* -----------------------------------
+   ÁUDIO e VISUALIZADOR
+----------------------------------- */
+.audio-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-color: #eee;
+  max-width: 170px;
+}
+
+.audio-play-button {
+  font-size: 25px;
+  cursor: pointer;
+  background: #66666655;
+  border: none;
+  color: #eee;
+  padding: 8px 16px;
+  border-radius: 30px;
+  user-select: none;
+}
+
+.visualizer {
+  display: flex;
+  gap: 3px;
+  width: 120px;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 8px;
+  height: 4px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  animation-name: none;
+  opacity: 0.3;
+  transition: height 0.2s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.bar.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: calc(var(--i) * 0.1s);
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  height: 40px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 0.6;
+  }
+  50% {
+    height: 40px;
+    background: rgba(255, 255, 255, 0.126);
+    opacity: 1;
+  }
+}
+
+/* Disco girando nos quadrados */
+.disk-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  max-width: 22px;
+  max-height: 22px;
+  z-index: 10;
+  transition: transform 0.6s linear;
+}
+
+.disk-icon.rotating {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -----------------------------------
+   INFOS de CONTROLE (WASD, ESC e ENTER)
+----------------------------------- */
+.controls-hint {
+  position: fixed;
+  bottom: 18px;
+  left: 75px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: Garamond, serif;
+  font-size: 20px;
+  color: white;
+  user-select: none;
+  z-index: 20;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-item img {
+  max-width: 65px;
+  max-height: 65px;
+  display: block;
+  filter: drop-shadow(0 0 2px black);
+}
+
+/* -----------------------------------
+   LOGOS RELACIONADAS
+----------------------------------- */
+
+.logos-bottom-right {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logos-bottom-right img {
+  max-height: 15px;
+  width: auto;
+  filter: grayscale();
+  opacity: 0.8;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.logos-bottom-right img:hover {
+  transform: scale(1.1);
+  filter: none;
+
+  opacity: 1;
+}
+
+/* -----------------------------------
+   UTILITÁRIOS E ESTADOS
+----------------------------------- */
+#character-grid.hidden {
+  display: none;
+}
+
+/* -----------------------------------
+   RESPONSIVIDADE - MEDIA QUERIES PARA IPAD PRO
+----------------------------------- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .controls-hint {
+    display: none;
+  }
+  .control-item {
+    display: none;
+  }
+
+  .control-item img {
+    display: none;
+  }
+  .logos-bottom-right {
+    left: 0px;
+    background: rgb(0, 0, 0);
+    bottom: 0px;
+    width: 105vh;
+    height: 90px;
+    justify-content: center;
+    object-fit: contain;
+  }
+
+  .logos-bottom-right img {
+    padding: 18px;
+    max-height: 50px;
+    max-width: 45px;
+    filter: none;
+    transform: translateX(-250%);
+    object-fit: contain;
+  }
+
+  #thebatmanlogo {
+    margin-left: 17px;
+  }
+
+  .character-title {
+    font-size: 110px;
+    left: 35%;
+    top: 16vh;
+    text-align: center;
+  }
+
+  .character-display {
+    margin: 0 auto;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  #character-image {
+    width: 30%;
+    max-height: 40%;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(8%) translateY(40%);
+  }
+
+  .container {
+    display: grid;
+    margin: 0 auto;
+    padding-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    grid-template-columns: repeat(2, 4px);
+    grid-template-rows: repeat(2, 4px);
+  }
+
+  .square {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .character-panel {
+    position: flex;
+    display: flex;
+    width: 62%;
+    height: 39%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .panel-content {
+    font-family: Garamond, serif;
+    font-size: 25px;
+    color: white;
+  }
+
+  .panel-btn img {
+    width: 36px;
+  }
+
+  .audio-container {
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+}
+
+/* -----------------------------------
+   RESPONSIVIDADE - MEDIA QUERY PARA CELULAR (IPhone 12 Pro e Samsung Galaxy S20 Ultra)
+----------------------------------- */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .app-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .character-title {
+    font-size: 66px;
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  #character-image {
+    width: auto;
+    max-height: 29%;
+    transform: none;
+    align-items: center;
+    position: flex;
+    z-index: -111;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: repeat(2, 70px);
+    gap: 15px;
+    margin-left: 0;
+    padding-top: 20px;
+    justify-content: center;
+  }
+
+  .square {
+    width: 70px;
+    height: 70px;
+    align-self: center;
+    right: 1vh;
+
+    top: 51vh;
+
+    /*transform: translateX(-50%);
+    transform: translateX(90%);*/
+  }
+
+  .character-panel {
+    position: relative;
+    justify-content: center;
+    top: auto;
+    left: auto;
+    width: 90vw;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .panel-content {
+    font-size: 18px;
+  }
+
+  .panel-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .panel-btn img {
+    width: 28px;
+  }
+
+  .audio-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .visualizer {
+    justify-content: center;
+  }
+
+  .controls-hint,
+  .control-item,
+  .control-item img {
+    display: none;
+  }
+
+  .logos-bottom-right {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 360;
+  }
+
+  .logos-bottom-right img {
+    max-height: 30px;
+    opacity: 0.7;
+    padding: 0 5px;
+    filter: none;
+    z-index: 360;
+  }
+}
+
+/* -----------------------------------
+   RESPONSIVIDADE - MEDIA QUERY PARA TV
+----------------------------------- */
+
+@media (min-width: 1280px) and (max-width: 1400px) {
+
+  
+  .character-title {
+    font-size: 42px;
+    top: 2vh;      
+    left: 50%;
+    text-align: center;
+  }
+    #character-image {
+    width: 30%;
+    max-height: 90%;
+  }
+
+  .panel-content {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Batman Bios</title>
+    <link rel="icon" type="image/x-icon" href="./assets/riddlericon.ico" />
+    <link rel="stylesheet" href="style.css" />
+     
+</head>
+<body>
+<video style="display: none;" crossorigin="anonymous"></video> 
+<video autoplay muted loop id="background-video1">
+  <source src="./assets/backgroundvideo1.mp4" type="video/mp4" />
+</video>
+<video autoplay muted loop id="background-video2">
+  <source src="./assets/backgroundvideo2.mp4" type="video/mp4" />
+</video>
+
+  <header>
+    <div id="character-title" class="character-title" hidden></div>
+  </header>
+
+  <div class="app-container">
+
+    <div class="container" id="square">
+      <div class="square portrait-batman" role="button" tabindex="0">
+        <span class="badge-new">NEW</span>
+        <img class="audio-disk" src="assets/icon-disk.png" alt="Audio" />
+      </div>
+      <div class="square portrait-catwoman" role="button" tabindex="0">
+        <span class="badge-new">NEW</span>
+      </div>
+      <div class="square portrait-pinguim" role="button" tabindex="0">
+        <span class="badge-new">NEW</span>
+      </div>
+      <div class="square portrait-riddler" role="button" tabindex="0">
+        <img class="audio-disk" src="assets/icon-disk.png" alt="Audio" />
+        <span class="badge-new">NEW</span>
+      </div>
+    </div>
+
+    <div id="character-display" class="character-display" hidden>
+      <div id="character-panel" class="character-panel" hidden>
+        <h2 id="panel-title" class="panel-title"></h2>
+        <div class="panel-buttons">
+          <button class="panel-btn active" data-tab="info">Info</button>
+          <button class="panel-btn" data-tab="description">Description</button>
+          <button class="panel-btn" data-tab="abilities">Abilities</button>
+          <button class="panel-btn audio-btn" data-tab="audio" hidden>Audio</button>
+        </div>
+        <div class="panel-content" id="panel-content"></div>
+        </div>
+
+      </div>
+      <img id="character-image" src="" alt="">
+    </div>
+
+  </div>
+
+  <div class="controls-hint">
+  <div class="control-item">
+    <img src="assets/icon-wasd.png" alt="WASD" />
+    <span>Move</span>
+  </div>
+  <div class="control-item">
+    <img src="assets/icon-esc.png" alt="ESC" />
+    <span>Close</span>
+  </div>
+  <div class="control-item">
+    <img src="assets/icon-enter.png" alt="ENTER" />
+    <span>View</span>
+  </div>
+</div>
+
+<div class="logos-bottom-right">
+  <a href="https://www.dc.com" target="_blank" >
+    <img src="assets/dccomicslogo.png" alt="DC Comics" id="dccomicslogo" />
+  </a>
+  <a href="https://www.max.com/au/en/movies/batman/dfa50804-e6f6-4fa2-a732-693dbc50527b" target="_blank">
+    <img src="assets/batmanlogo.png" alt="The Batman" id="thebatmanlogo" />
+  </a>
+  <a href="https://batmanapi.com" target="_blank">
+    <img src="assets/batmanapilogo.png" alt="Batman API" id="batmanapilogo" />
+  </a>
+</div>
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
