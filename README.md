@@ -67,3 +67,28 @@ Considering that in the game Batman pulls this data from a database, it makes se
 
 Link to the API: https://batmanapi.com/
 
+# 🔥 Novo estilo, mesmas funções
+
+A tela de biografia de *Arkham City* focava em replicar o visual da WayneTech, com cores voltadas para o azul e tons monocromáticos. Apesar de bem executado, o projeto tomou outro rumo: adotou o estilo e design vistos em *The Batman* (2022), com tons em vermelho, alaranjado e preto, buscando representar melhor a atmosfera dos pôsteres e da identidade visual do filme.
+
+A inspiração principal continua sendo a tela de biografia de *Arkham City*, mas também foram incorporadas ideias de outros jogos: os efeitos sonoros de *Arkham Asylum*, a transição mais abrupta dos personagens em *Arkham Origins*, e as bordas animadas de *Arkham Knight*. Assim, o projeto não se limita a um único jogo, explorando ao máximo diferentes possibilidades.
+
+Sobre as bordas: ao invés de manter a textura tecnológica dos *Arkham Knight*, decidiu-se representar um momento-chave do enredo do filme, o resgate durante a inundação, com o uso do sinalizador.
+
+# 🔥 New style, same functions
+
+The biography screen in *Arkham City* aimed to replicate the WayneTech interface, featuring blue and monochromatic tones. While it was well-executed, this project took a different path, adopting the style and design of *The Batman* (2022), with red, orange, and black tones to better reflect the atmosphere and aesthetics of the film's posters.
+
+The primary inspiration is still the *Arkham City* biography screen, but elements from other games were also incorporated: the sound effects from *Arkham Asylum*, the sharper character transitions from *Arkham Origins*, and the animated borders from *Arkham Knight*. The goal was not to stick to a single game, but to explore all possible creative directions.
+
+Regarding the borders: instead of following the tech-textured style from *Arkham Knight*, the idea was to represent a key moment from the film’s plot, the rescue during the flood, marked by the use of the flare.
+
+| <div align="center">Arkham City X Wireframe</div> |
+|:--:|
+| <img src="./wireframes/3-comparasion.png" alt="Preview Desktop" width="500"/> |
+
+| <div align="center">Border Style</div> |
+|:--:|
+| <img src="./wireframes/4-borders.png" alt="Preview Desktop" width="500"/> 
+
+
