@@ -14,7 +14,7 @@ Released in 2008, the *Arkham* game franchise has inspired various other media, 
 
 One of the classic elements of the saga is its distinct interface, including the character biography screen. The purpose of this feature is to explain and provide details about characters that Batman or his allies encounter throughout the story, helping players understand who they are without much difficulty.
 
-With the success of *The Batman* film, the *Penguin* series, and *The Batman – Part II* set to hit theaters, it’s interesting to imagine how the biography screen from *Batman: Arkham City* would look if adapted to the characters and design of the so-called "The Batman Saga."
+With the success of *The Batman* film, the *Penguin* series, and *The Batman – Part II* set to hit theaters, it’s interesting to imagine how the biography screen from *Batman: Arkham City* would look if adapted to the characters and design of the so-called "The Batman Saga".
 
 | <div align="center">Desktop</div> |
 |:--:|
@@ -28,3 +28,42 @@ With the success of *The Batman* film, the *Penguin* series, and *The Batman –
 </div>
 
 ---
+
+
+# 🔍 Como buscar as informações?
+
+Para obter as informações, foi usada uma API chamada **Batman API**.
+
+Ela fornece praticamente todos os dados que aparecem no painel de biografia de todos os personagens disponíveis.
+
+Como o projeto exige detalhes como "Primeira Aparição" e "Habilidades" para retratar a obra original, essa API foi necessária.
+
+Levando em conta que, no jogo, o Batman busca essas informações via banco de dados, faz sentido também chamar uma API para receber dados externos.
+
+**Detalhe 1:** O nome verdadeiro do Charada no filme é Edward Nashton, porém a API utiliza seu nome original, Edward Nigma.
+
+**Detalhe 2:** Similar ao problema do nome do Charada, a API retrata as armas de guarda-chuva do Pinguim original em alguns tópicos.
+
+**Detalhe 3:** Para fazer jus à nomenclatura do próprio Batman, não seria interessante chamar essa API de BatApi? (Brincadeira)
+
+Link para a API: https://batmanapi.com/
+
+
+# 🔍 How to fetch the information?
+
+To retrieve the data, an API called **Batman API** was used.
+
+It provides almost all the information shown on the biography panel of all available characters.
+
+Since the project requires details like "First Appearance" and "Abilities" to accurately portray the source material, this API was necessary.
+
+Considering that in the game Batman pulls this data from a database, it makes sense to also call an API to receive external information.
+
+**Detail 1:** The real name of the Riddler in the movie is Edward Nashton, but the API uses his original name, Edward Nigma.
+
+**Detail 2:** Similar to the issue with the Riddler’s name, the API reflects the original Penguin’s umbrella weapons in some topics.
+
+**Detail 3:** To honor Batman’s own naming style, wouldn’t it be interesting to call this API BatApi? (Just Kidding)
+
+Link to the API: https://batmanapi.com/
+
