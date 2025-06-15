@@ -27,6 +27,10 @@ With the success of *The Batman* film, the *Penguin* series, and *The Batman –
   <img src="./preview/images/preview-phone.png" alt="Preview Celular" style="height: 250px; width: auto;"/>
 </div>
 
+<p style="text-align: center; font-style: italic; margin-top: 8px;">
+  TV, IPad Pro, and phone.
+</p>
+
 ---
 
 
@@ -67,6 +71,8 @@ Considering that in the game Batman pulls this data from a database, it makes se
 
 Link to the API: https://batmanapi.com/
 
+---
+
 # 🔥 Novo estilo, mesmas funções
 
 A tela de biografia de *Arkham City* focava em replicar o visual da WayneTech, com cores voltadas para o azul e tons monocromáticos. Apesar de bem executado, o projeto tomou outro rumo: adotou o estilo e design vistos em *The Batman* (2022), com tons em vermelho, alaranjado e preto, buscando representar melhor a atmosfera dos pôsteres e da identidade visual do filme.
@@ -90,5 +96,36 @@ Regarding the borders: instead of following the tech-textured style from *Arkham
 | <div align="center">Border Style</div> |
 |:--:|
 | <img src="./wireframes/4-borders.png" alt="Preview Desktop" width="500"/> 
+
+---
+
+## 🖥️ Elementos da Interface
+
+- A tela de biografia possui alguns recursos, como o aviso "NEW" nos retratos, indicando que um perfil foi desbloqueado, semelhante ao que ocorre em *Arkham City*.
+
+- Um visualizador de áudio representa as frequências sonoras. Ao retornar para a tela dos personagens, o disco dos repectivo personagem começa a girar, indicando que o áudio ainda está ativo. (Somente o Batman e o Charada possuem áudio)
+
+- Por fim, a interface foi adaptada para funcionar tanto com teclado quanto com tela sensível ao toque.
+
+## 🖥️ Interface Elements
+
+- The biography screen includes features like the "NEW" badge on portraits, indicating an unlocked profile, similar to what you see in *Arkham City*.
+
+- An audio visualizer displays the sound frequencies. When returning to the character screen, the respective character's disc begins to spin, indicating that the audio is still playing. (Only Batman and Riddler have audio)
+
+- Finally, the interface has been adapted to support both keyboard and touchscreen input.
+
+| Function |  Image |
+|------|--------|
+| NEW Badge | <img src="./preview/gifs/preview-newbadge.gif" width="200px"> |
+| Audio visualizer | <img src="./preview/gifs/preview-visualizer.gif" width="200px"> |
+
+---
+
+| <div align="center">Interface (IPad Pro)</div> |
+|:--:|
+| <img src="./preview/gifs/testingipadpro-preview.gif" alt="Interface Teste" height="500"/> |
+
+---
 
 
