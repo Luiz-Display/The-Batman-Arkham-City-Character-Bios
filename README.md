@@ -103,7 +103,7 @@ Regarding the borders: instead of following the tech-textured style from *Arkham
 
 - A tela de biografia possui alguns recursos, como o aviso "NEW" nos retratos, indicando que um perfil foi desbloqueado, semelhante ao que ocorre em *Arkham City*.
 
-- Um visualizador de áudio representa as frequências sonoras. Ao retornar para a tela dos personagens, o disco dos repectivo personagem começa a girar, indicando que o áudio ainda está ativo. (Somente o Batman e o Charada possuem áudio)
+- Um visualizador de áudio representa as frequências sonoras. Ao retornar para a tela dos personagens, o disco dos repectivos personagens começa a girar, indicando que o áudio ainda está ativo. (Somente o Batman e o Charada possuem áudio)
 
 - Por fim, a interface foi adaptada para funcionar tanto com teclado quanto com tela sensível ao toque.
 
