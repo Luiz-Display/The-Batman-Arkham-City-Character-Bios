@@ -79,7 +79,7 @@ A tela de biografia de *Arkham City* focava em replicar o visual da WayneTech, c
 
 A inspiração principal continua sendo a tela de biografia de *Arkham City*, mas também foram incorporadas ideias de outros jogos: os efeitos sonoros de *Arkham Asylum*, a transição mais abrupta dos personagens em *Arkham Origins*, e as bordas animadas de *Arkham Knight*. Assim, o projeto não se limita a um único jogo, explorando ao máximo diferentes possibilidades.
 
-Sobre as bordas: ao invés de manter a textura tecnológica dos *Arkham Knight*, decidiu-se representar um momento-chave do enredo do filme, o resgate durante a inundação, com o uso do sinalizador.
+Sobre as bordas: ao invés de manter a textura tecnológica do *Arkham Knight*, decidiu-se representar um momento-chave do enredo do filme, o resgate durante a inundação, com o uso do sinalizador.
 
 # 🔥 New style, same functions
 
