@@ -118,7 +118,7 @@ Regarding the borders: instead of following the tech-textured style from *Arkham
 | Function |  Image |
 |------|--------|
 | NEW Badge | <img src="./preview/gifs/preview-newbadge.gif" width="200px"> |
-| Audio visualizer | <img src="./preview/gifs/preview-visualizer.gif" width="200px"> |
+| Audio Visualizer | <img src="./preview/gifs/preview-visualizer.gif" width="200px"> |
 
 ---
 
